@@ -13,10 +13,12 @@
 		5C52556C26DB9CAE000B1100 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C52556B26DB9CAE000B1100 /* Assets.xcassets */; };
 		5C52556F26DB9CAE000B1100 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C52556D26DB9CAE000B1100 /* LaunchScreen.storyboard */; };
 		5C52557826DBF218000B1100 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C52557726DBF218000B1100 /* Message.swift */; };
-		5C52557C26DBF379000B1100 /* TextChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C52557B26DBF379000B1100 /* TextChatBubbleView.swift */; };
-		5C52557E26DBF391000B1100 /* TextChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C52557D26DBF391000B1100 /* TextChatCell.swift */; };
-		5C52558026DBF3A5000B1100 /* ImageChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C52557F26DBF3A5000B1100 /* ImageChatBubbleView.swift */; };
-		5C52558226DBF3B9000B1100 /* ImageChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C52558126DBF3B8000B1100 /* ImageChatCell.swift */; };
+		5C52557C26DBF379000B1100 /* GenericChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C52557B26DBF379000B1100 /* GenericChatBubbleView.swift */; };
+		5C52557E26DBF391000B1100 /* GenericChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C52557D26DBF391000B1100 /* GenericChatCell.swift */; };
+		5C5B127C26E1F7010037AC28 /* TextChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5B127B26E1F7000037AC28 /* TextChatBubbleView.swift */; };
+		5C5B127E26E1F7200037AC28 /* ImageChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5B127D26E1F7200037AC28 /* ImageChatBubbleView.swift */; };
+		5C5B128126E1F7A60037AC28 /* ImageChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5B128026E1F7A60037AC28 /* ImageChatCell.swift */; };
+		5C5B128326E1F7BB0037AC28 /* TextChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5B128226E1F7BB0037AC28 /* TextChatCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +30,12 @@
 		5C52556E26DB9CAE000B1100 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C52557026DB9CAE000B1100 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C52557726DBF218000B1100 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		5C52557B26DBF379000B1100 /* TextChatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextChatBubbleView.swift; sourceTree = "<group>"; };
-		5C52557D26DBF391000B1100 /* TextChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextChatCell.swift; sourceTree = "<group>"; };
-		5C52557F26DBF3A5000B1100 /* ImageChatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageChatBubbleView.swift; sourceTree = "<group>"; };
-		5C52558126DBF3B8000B1100 /* ImageChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageChatCell.swift; sourceTree = "<group>"; };
+		5C52557B26DBF379000B1100 /* GenericChatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericChatBubbleView.swift; sourceTree = "<group>"; };
+		5C52557D26DBF391000B1100 /* GenericChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericChatCell.swift; sourceTree = "<group>"; };
+		5C5B127B26E1F7000037AC28 /* TextChatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextChatBubbleView.swift; sourceTree = "<group>"; };
+		5C5B127D26E1F7200037AC28 /* ImageChatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageChatBubbleView.swift; sourceTree = "<group>"; };
+		5C5B128026E1F7A60037AC28 /* ImageChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageChatCell.swift; sourceTree = "<group>"; };
+		5C5B128226E1F7BB0037AC28 /* TextChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextChatCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,10 +91,8 @@
 		5C52557926DBF357000B1100 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5C52557B26DBF379000B1100 /* TextChatBubbleView.swift */,
-				5C52557D26DBF391000B1100 /* TextChatCell.swift */,
-				5C52557F26DBF3A5000B1100 /* ImageChatBubbleView.swift */,
-				5C52558126DBF3B8000B1100 /* ImageChatCell.swift */,
+				5C5B127F26E1F76E0037AC28 /* ChatCells */,
+				5C5B127A26E1F6DC0037AC28 /* ChatBubbleViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -101,6 +103,26 @@
 				5C52556626DB9CAD000B1100 /* ChatTableViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5C5B127A26E1F6DC0037AC28 /* ChatBubbleViews */ = {
+			isa = PBXGroup;
+			children = (
+				5C52557B26DBF379000B1100 /* GenericChatBubbleView.swift */,
+				5C5B127B26E1F7000037AC28 /* TextChatBubbleView.swift */,
+				5C5B127D26E1F7200037AC28 /* ImageChatBubbleView.swift */,
+			);
+			path = ChatBubbleViews;
+			sourceTree = "<group>";
+		};
+		5C5B127F26E1F76E0037AC28 /* ChatCells */ = {
+			isa = PBXGroup;
+			children = (
+				5C52557D26DBF391000B1100 /* GenericChatCell.swift */,
+				5C5B128026E1F7A60037AC28 /* ImageChatCell.swift */,
+				5C5B128226E1F7BB0037AC28 /* TextChatCell.swift */,
+			);
+			path = ChatCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,11 +195,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C52556726DB9CAD000B1100 /* ChatTableViewController.swift in Sources */,
-				5C52558226DBF3B9000B1100 /* ImageChatCell.swift in Sources */,
+				5C5B128326E1F7BB0037AC28 /* TextChatCell.swift in Sources */,
+				5C5B127C26E1F7010037AC28 /* TextChatBubbleView.swift in Sources */,
+				5C5B127E26E1F7200037AC28 /* ImageChatBubbleView.swift in Sources */,
 				5C52556326DB9CAD000B1100 /* AppDelegate.swift in Sources */,
-				5C52557E26DBF391000B1100 /* TextChatCell.swift in Sources */,
-				5C52558026DBF3A5000B1100 /* ImageChatBubbleView.swift in Sources */,
-				5C52557C26DBF379000B1100 /* TextChatBubbleView.swift in Sources */,
+				5C52557E26DBF391000B1100 /* GenericChatCell.swift in Sources */,
+				5C52557C26DBF379000B1100 /* GenericChatBubbleView.swift in Sources */,
+				5C5B128126E1F7A60037AC28 /* ImageChatCell.swift in Sources */,
 				5C52556526DB9CAD000B1100 /* SceneDelegate.swift in Sources */,
 				5C52557826DBF218000B1100 /* Message.swift in Sources */,
 			);

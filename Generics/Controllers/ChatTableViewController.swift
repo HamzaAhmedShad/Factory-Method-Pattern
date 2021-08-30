@@ -19,7 +19,7 @@ class ChatTableViewController: UITableViewController {
 
         setupTableView()
     }
-
+    
     private func setupTableView() {
         tableView.register(ImageChatCell.self, forCellReuseIdentifier: "imageCell")
         tableView.register(TextChatCell.self, forCellReuseIdentifier: "textCell")
@@ -47,7 +47,7 @@ class ChatTableViewController: UITableViewController {
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "imageCell") as! ImageChatCell
             cell.name = messages[indexPath.row].senderName
-            cell.image = messages[indexPath.row].image
+            cell.message = messages[indexPath.row].image
             
             rotate180(cell)
             return cell

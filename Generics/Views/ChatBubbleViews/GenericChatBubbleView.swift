@@ -1,5 +1,5 @@
 //
-//  ImageChatBubbleView.swift
+//  GenericChatBubbleView.swift
 //  Generics
 //
 //  Created by alok subedi on 29/08/2021.
@@ -7,20 +7,14 @@
 
 import UIKit
 
-class ImageChatBubbleView: UIView {
+class GenericChatBubbleView<MessageView: UIView>: UIView {
     let nameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
-        label.numberOfLines = 0
         return label
     }()
     
-    let messageImageView: UIImageView = {
-        let view = UIImageView()
-        view.backgroundColor = .magenta
-        view.layer.cornerRadius = 10
-        return view
-    }()
+    var messageView = MessageView()
     
     let bubbleView: UIView = {
         let view = UIView()
@@ -33,12 +27,15 @@ class ImageChatBubbleView: UIView {
     convenience init() {
         self.init(frame: .zero)
         
+        setupMessageView()
         addViews()
     }
     
+    func setupMessageView() { }
+    
     private func addViews() {
         addSubview(bubbleView)
-        [nameLabel, messageImageView].forEach {
+        [nameLabel, messageView].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             bubbleView.addSubview($0)
         }
@@ -49,19 +46,16 @@ class ImageChatBubbleView: UIView {
         NSLayoutConstraint.activate([
             bubbleView.topAnchor.constraint(equalTo: topAnchor),
             bubbleView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            bubbleView.widthAnchor.constraint(lessThanOrEqualToConstant: 250),
             bubbleView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            bubbleView.widthAnchor.constraint(lessThanOrEqualToConstant: 250),
             
             nameLabel.topAnchor.constraint(equalTo: bubbleView.topAnchor, constant: 8),
             nameLabel.leadingAnchor.constraint(equalTo: bubbleView.leadingAnchor, constant: 14),
             
-            messageImageView.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8),
-            messageImageView.leadingAnchor.constraint(equalTo: bubbleView.leadingAnchor, constant: 8),
-            messageImageView.trailingAnchor.constraint(equalTo: bubbleView.trailingAnchor, constant: -8),
-            messageImageView.bottomAnchor.constraint(equalTo: bubbleView.bottomAnchor, constant: -8),
-            
-            messageImageView.widthAnchor.constraint(equalToConstant: 250 - 16),
-            messageImageView.heightAnchor.constraint(equalTo: messageImageView.widthAnchor, multiplier: 3/2)
+            messageView.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8),
+            messageView.leadingAnchor.constraint(equalTo: bubbleView.leadingAnchor, constant: 8),
+            messageView.trailingAnchor.constraint(equalTo: bubbleView.trailingAnchor, constant: -8),
+            messageView.bottomAnchor.constraint(equalTo: bubbleView.bottomAnchor, constant: -8),
         ])
     }
 }
