@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		350ADC1E2ACBED0A000CDEA0 /* MessageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350ADC1D2ACBED0A000CDEA0 /* MessageFactory.swift */; };
 		5C52556326DB9CAD000B1100 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C52556226DB9CAD000B1100 /* AppDelegate.swift */; };
 		5C52556526DB9CAD000B1100 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C52556426DB9CAD000B1100 /* SceneDelegate.swift */; };
 		5C52556726DB9CAD000B1100 /* ChatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C52556626DB9CAD000B1100 /* ChatTableViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		350ADC1D2ACBED0A000CDEA0 /* MessageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFactory.swift; sourceTree = "<group>"; };
 		5C52555F26DB9CAD000B1100 /* Generics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Generics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C52556226DB9CAD000B1100 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C52556426DB9CAD000B1100 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				5C52556626DB9CAD000B1100 /* ChatTableViewController.swift */,
+				350ADC1D2ACBED0A000CDEA0 /* MessageFactory.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				5C52556726DB9CAD000B1100 /* ChatTableViewController.swift in Sources */,
 				5C5B128326E1F7BB0037AC28 /* TextChatCell.swift in Sources */,
 				5C5B127C26E1F7010037AC28 /* TextChatBubbleView.swift in Sources */,
+				350ADC1E2ACBED0A000CDEA0 /* MessageFactory.swift in Sources */,
 				5C5B127E26E1F7200037AC28 /* ImageChatBubbleView.swift in Sources */,
 				5C52556326DB9CAD000B1100 /* AppDelegate.swift in Sources */,
 				5C52557E26DBF391000B1100 /* GenericChatCell.swift in Sources */,

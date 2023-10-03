@@ -12,6 +12,7 @@ class ChatTableViewController: UITableViewController {
         Message(senderName: "Name 1", message: "Message 0", image: nil),
         Message(senderName: "Name 2", message: nil, image: UIImage()),
         Message(senderName: "Name 3", message: "Message which is longer to display it in multi-line. Yes!!!! it works", image: nil),
+        Message(senderName: "Hamza", message: "Hello World", image: nil)
     ]
     
     override func viewDidLoad() {
@@ -37,20 +38,8 @@ class ChatTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if messages[indexPath.row].image == nil {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "textCell") as! TextChatCell
-            cell.name = messages[indexPath.row].senderName
-            cell.message = messages[indexPath.row].message
-            
-            rotate180(cell)
-            return cell
-        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "imageCell") as! ImageChatCell
-            cell.name = messages[indexPath.row].senderName
-            cell.message = messages[indexPath.row].image
-            
-            rotate180(cell)
-            return cell
-        }
+        let cell = MasterChatCellFactory().createCell(for: messages[indexPath.row], dequeueingTabelView: tableView)
+        rotate180(cell)
+        return cell
     }
 }
